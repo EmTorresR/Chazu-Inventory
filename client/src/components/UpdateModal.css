@@ -1,0 +1,7 @@
+/* client/src/components/UpdateModal.css */
+.left-modal .ant-modal {
+    margin: 0;
+    left: 1% !important;
+    transform: none !important;
+  }
+  

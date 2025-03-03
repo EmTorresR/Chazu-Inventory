@@ -1,0 +1,49 @@
+/* client/src/components/ScannerArea.css */
+
+.scanner-area {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para el overlay dentro del área del escáner */
+  .scanner-area .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  
+  .scanner-area .overlay h3 {
+    margin: 0 0 5px;
+  }
+  
+  .scanner-area .overlay pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+  }
+  
+  /* Estilo para un mensaje de estado del escáner, si lo requieres */
+  .scanner-area .scanner-status {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1100;
+  }
+  

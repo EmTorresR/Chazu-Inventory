@@ -1,0 +1,19 @@
+/* client/src/components/PaginaPrueba.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.dark {
+  background-color: #1a202c;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+/* Puedes agregar otros estilos específicos para tu layout */

@@ -1,0 +1,45 @@
+/* Estilos para la tabla en modo oscuro */
+.dark .custom-ant-table {
+  background-color: #0F0F12;
+  color: #ffffff;
+}
+
+.dark .custom-ant-table .ant-table-thead > tr > th {
+  background-color: #1F1F23;
+  color: #ffffff;
+  border-color: #2B2B30;
+}
+
+.dark .custom-ant-table .ant-table-tbody > tr > td {
+  background-color: #0F0F12;
+  color: #ffffff;
+  border-color: #2B2B30;
+}
+
+/* Opcional: Ajustar paginación y otros componentes de la tabla */
+.dark .custom-ant-table .ant-pagination-item,
+.dark .custom-ant-table .ant-pagination-prev,
+.dark .custom-ant-table .ant-pagination-next {
+  background-color: #0F0F12;
+  color: #ffffff;
+  border-color: #2B2B30;
+}
+
+/* Forzar un fondo oscuro consistente al pasar el ratón sobre una fila en modo oscuro */
+.dark .custom-ant-table .ant-table-tbody > tr:hover > td {
+  background-color: #1F1F23 !important;
+}
+
+/* Cambiar el color del botón de filtros en modo oscuro */
+.dark .custom-ant-table .ant-table-filter-trigger {
+  color: #ffffff !important;
+}
+
+.dark .custom-ant-table .ant-table-filter-trigger:hover {
+  color: #ffffff !important;
+}
+
+.custom-ant-table {
+  margin-bottom: 0 !important;
+  /* Opcional: si la tabla tiene padding interno que empuja el contenedor, se puede ajustar */
+}

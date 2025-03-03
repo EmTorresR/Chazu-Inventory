@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "alegraswagger-test",
+      "source": "@alegraswagger-test/v1.0#51j2vm66ykjau",
+      "integrity": "sha512-6oF+8jvlTbN3aUl3T2SHY39yTUKMNEoW9wlA9jQDXBG12NlfjJNfOXNpkY0HhR3gNFE0BzNBxJGIOr3lVlsS8Q==",
+      "installerVersion": "6.1.2"
+    }
+  ]
+}

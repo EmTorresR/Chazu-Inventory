@@ -1,0 +1,56 @@
+.dashboard-container {
+  position: relative;
+  padding: 20px;
+  max-width: 100vw;       /* Limita el contenedor al ancho de la ventana */
+  overflow-x: hidden;     /* Evita desbordes horizontales */
+}
+
+.dashboard-button-container {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+/* 
+  En pantallas pequeñas, el contenedor se alinea a la izquierda (margin: 0). 
+  En pantallas mayores (a partir de 640px), se centra (margin: 0 auto).
+*/
+.scanner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;  /* En móviles, ocupa todo el ancho disponible */
+  margin: 0;        /* Alineado a la izquierda */
+}
+
+@media (min-width: 640px) {
+  .scanner-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
+
+/* Estilos para la tabla de inventario */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.inventory-table th,
+.inventory-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.inventory-table th {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para posicionar el modal de actualización hacia la izquierda */
+.left-modal .ant-modal {
+  margin: 0;
+  left: 1% !important;
+  transform: none !important;
+}
