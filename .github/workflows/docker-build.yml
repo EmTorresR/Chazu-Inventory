@@ -27,7 +27,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
-      - name: Build Docker image
+      # Construir y empujar imagen del backend
+      - name: Build Backend Docker image
         env:
           DOCKER_TAG: ${{ secrets.DOCKERHUB_USERNAME }}/chazu-backend:latest
         run: docker build -t "$DOCKER_TAG" -f Dockerfile .
@@ -38,7 +39,20 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Push Docker image
+      - name: Push Backend Docker image
         env:
           DOCKER_TAG: ${{ secrets.DOCKERHUB_USERNAME }}/chazu-backend:latest
+        run: docker push "$DOCKER_TAG"
+
+      # Construir y empujar imagen del frontend
+      - name: Build Frontend Docker image
+        working-directory: client
+        env:
+          DOCKER_TAG: ${{ secrets.DOCKERHUB_USERNAME }}/chazu-frontend:latest
+        run: docker build -t "$DOCKER_TAG" -f Dockerfile .
+
+      - name: Push Frontend Docker image
+        working-directory: client
+        env:
+          DOCKER_TAG: ${{ secrets.DOCKERHUB_USERNAME }}/chazu-frontend:latest
         run: docker push "$DOCKER_TAG"
