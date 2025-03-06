@@ -194,7 +194,7 @@ const ScannerQR = () => {
           onToggleDetails={() => {}}
           onStockEditorChange={handleStockEditorChange}
         />
-      </div> //xd
+      </div> 
   
       <UpdateModal
         visible={updateModalVisible}
