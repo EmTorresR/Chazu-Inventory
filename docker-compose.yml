@@ -26,6 +26,8 @@ services:
       - "5000:5000"
     depends_on:
       - mysql
+    # Usa wait-for-it para esperar a que MySQL esté listo antes de iniciar el backend
+    command: sh -c "/wait-for-it.sh mysql:3306 -- node src/index.js"
 
   frontend:
     image: "${DOCKERHUB_USERNAME}/chazu-frontend:latest"

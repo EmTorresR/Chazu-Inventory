@@ -10,11 +10,15 @@ COPY package*.json ./
 # Instala las dependencias
 RUN npm install
 
-# Copia el resto del código
+# Copia el script wait-for-it.sh al contenedor y le asigna permisos de ejecución
+COPY wait-for-it.sh /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
+
+# Copia el resto del código de la aplicación
 COPY . .
 
-# Expone el puerto que utiliza el servidor (en tu caso, 5000)
+# Expone el puerto que utiliza el servidor (en este caso, 5000)
 EXPOSE 5000
 
-# Comando para arrancar el servidor
+# Comando por defecto (se sobrescribirá en docker-compose)
 CMD ["node", "src/index.js"]
